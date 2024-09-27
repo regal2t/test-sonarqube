@@ -1,0 +1,15 @@
+com/microservice/payments/api/models/db/TransactionEntity.class
+com/microservice/payments/api/services/exceptions/IdMismatchException.class
+com/microservice/payments/api/mapper/TransactionMapper.class
+com/microservice/payments/api/services/exceptions/GeneralServiceException.class
+com/microservice/payments/api/services/TransactionService.class
+com/microservice/payments/api/services/exceptions/UnauthorizedException.class
+com/microservice/payments/api/services/impl/TransactionServiceImpl.class
+com/microservice/payments/api/rest/v1/utils/RestProperties.class
+com/microservice/payments/api/rest/v1/utils/RestExceptionHandler.class
+com/microservice/payments/api/services/exceptions/EmptyPayloadException.class
+com/microservice/payments/api/models/db/common/BaseEntity.class
+com/microservice/payments/api/services/exceptions/ResourceNotFoundException.class
+com/microservice/payments/api/models/TransactionRepository.class
+com/microservice/payments/api/RestApplication.class
+com/microservice/payments/api/rest/v1/resources/TransactionResource.class

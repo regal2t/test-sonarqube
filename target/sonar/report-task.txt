@@ -1,0 +1,6 @@
+projectKey=ms-test
+serverUrl=http://170.64.232.139:8050
+serverVersion=10.6.0.92116
+dashboardUrl=http://170.64.232.139:8050/dashboard?id=ms-test
+ceTaskId=4652f796-15d1-41a4-816a-5c6bb045c834
+ceTaskUrl=http://170.64.232.139:8050/api/ce/task?id=4652f796-15d1-41a4-816a-5c6bb045c834
