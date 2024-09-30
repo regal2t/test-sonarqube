@@ -31,7 +31,15 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+        
+        <!-- JaCoCo version for code coverage -->
+        <jacoco.version>0.8.7</jacoco.version>
+        
+        <!-- SonarQube properties -->
+        <sonar.host.url>http://your-sonarqube-server.com</sonar.host.url>
+        <sonar.projectKey>microservice-payments</sonar.projectKey>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+        
         <h2.version>1.4.196</h2.version>
     </properties>
 
@@ -45,4 +53,42 @@
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <!-- JaCoCo Maven Plugin for code coverage -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal> <!-- Instrument the classes for coverage collection -->
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal> <!-- Generate the code coverage report -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- SonarQube Maven Plugin for static code analysis -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>sonar</goal> <!-- Run SonarQube analysis -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
